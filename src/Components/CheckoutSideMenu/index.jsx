@@ -13,7 +13,6 @@ export default function CheckoutSideMenu() {
 
   const date = new Date();
   const dateFormat = `${date.getDate()} - ${date.getMonth()} - ${date.getFullYear()}`
-  console.log(dateFormat)
 
   const HandleDelete = (id) => {
     const filteredProducts = context.cartProducts.filter(

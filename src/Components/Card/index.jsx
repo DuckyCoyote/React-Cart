@@ -55,7 +55,7 @@ function Card(data) {
         </span>
         <img
           className="w-full h-full object-cover rounded-lg"
-          src={images[1]}
+          src={images[0]}
           alt={description}
         ></img>
         {RenderIcon(data.data.id)}

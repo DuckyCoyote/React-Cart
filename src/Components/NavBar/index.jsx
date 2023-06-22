@@ -19,6 +19,7 @@ function NavBar() {
         <li>
           <NavLink
             to="/"
+            onClick={() => context.setSearchByCategory("")}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             All
@@ -26,6 +27,7 @@ function NavBar() {
         </li>
         <li>
           <NavLink
+            onClick={() => context.setSearchByCategory("clothes")}
             to="/clothes"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
@@ -34,6 +36,7 @@ function NavBar() {
         </li>
         <li>
           <NavLink
+            onClick={() => context.setSearchByCategory("electronics")}
             to="/electronics"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
@@ -42,6 +45,7 @@ function NavBar() {
         </li>
         <li>
           <NavLink
+            onClick={() => context.setSearchByCategory("fornitures")}
             to="/fornitures"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
@@ -50,6 +54,7 @@ function NavBar() {
         </li>
         <li>
           <NavLink
+            onClick={() => context.setSearchByCategory("toys")}
             to="/toys"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
@@ -58,6 +63,7 @@ function NavBar() {
         </li>
         <li>
           <NavLink
+            onClick={() => context.setSearchByCategory("others")}
             to="/others"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
@@ -92,7 +98,11 @@ function NavBar() {
           </NavLink>
         </li>
         <li className="flex items-center justify-center">
-          <ShoppingBagIcon className="h-6 w-6" /> {context.cartProducts.length}
+          <ShoppingBagIcon
+            onClick={() => context.OpenCheckoutSideMenu()}
+            className="h-6 w-6 cursor-pointer"
+          />{" "}
+          {context.cartProducts.length}
         </li>
       </ul>
     </nav>
